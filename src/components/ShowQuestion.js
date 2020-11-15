@@ -36,7 +36,7 @@ export default function ShowQuestion(props) {
 				</>
 			) : (
 				<>
-				<div className='question-section'>
+					<div className='question-section'>
 						<div className='question-count'>
 							<span>Question {currentQuestion}</span>/{questions.length-1}
 						</div>
