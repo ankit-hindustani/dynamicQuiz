@@ -36,17 +36,7 @@ export default function ShowQuestion(props) {
 				</>
 			) : (
 				<>
-					<div className='question-section'>
-						<div className='question-count'>
-							<span>Question {currentQuestion}</span>/{questions.length-1}
-						</div>
-						<div className='question-text'>{questions[currentQuestion].questionText}</div>
-					</div>
-					<div className='answer-section'>
-						{questions[currentQuestion].answerOptions.map((answerOption) => (
-							<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
-						))}
-					</div>
+
 					<div className='question-section'>
 						<div className='question-count'>
 							<span>Question {currentQuestion}</span>/{questions.length-1}
