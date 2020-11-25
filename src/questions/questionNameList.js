@@ -1,11 +1,10 @@
 
-import FirstQuestion from './firstQuestion';
-import SecondQuestion from './secondQuestion';
-import ThirdQuestion from './thirdQuestion';
+import DataStructure from './question1';
+import CLanguage from './question2';
+
 const questionNameList=[
-FirstQuestion,
-SecondQuestion,
-ThirdQuestion
+    DataStructure,
+    CLanguage,
 ];
 
 export default questionNameList;
