@@ -49,6 +49,16 @@ body {
   justify-content: space-evenly;
 }
 
+
+@media screen and (max-width: 600px) {
+ 
+  .homeQuestionList h1{
+    margin-top: 0px;
+    
+  }
+
+}
+
 .score-section {
   display: flex;
   font-size: 24px;
@@ -170,3 +180,4 @@ card {
   margin: 20px 0;
   color: #1a7e76;
 }
+
