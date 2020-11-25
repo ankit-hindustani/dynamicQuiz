@@ -5,13 +5,22 @@ import Progress from 'react-progressbar';
 export default function ShowQuestion(props) {
 
 	const [seconds, setSeconds] = useState(5);	
-	const [currentQuestion, setCurrentQuestion] = useState(1);
+	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
 	const [completedPBar,setCompletedPBar]=useState(90);
 	const questions=props.question;
 
+		
+	
+	
 	useEffect(() => {
+		//question shuffle 
+		questions.splice(0, 1);
+		questions.sort(() => Math.random() - 0.5);
+		questions.splice(10); //question trim
+
+
 		const interval = setInterval(() => {
 		  setSeconds(seconds => seconds - 1);
 		}, 1000);
@@ -31,7 +40,10 @@ export default function ShowQuestion(props) {
 
 	const handleAnswerOptionClick = (isCorrect) => {
 		if (isCorrect) {
-			setScore(score + 1);
+			if(completedPBar>0){
+				setScore(score + 1);
+			}
+			
 		}
 
 		const nextQuestion = currentQuestion + 1;
@@ -47,10 +59,10 @@ export default function ShowQuestion(props) {
 			{seconds<1 ?(<>
 				{showScore ? (<>
 				<div className='score-section'>
-					You scored {score} out of {questions.length-1}<br/>
+					You scored {score} out of {questions.length}<br/>
 					
 				</div>
-				{score>((questions.length-1)/2)?<p>
+				{score>((questions.length)/2)?<p>
 						Good! Your Score Is Above <strong>50%</strong>
 					</p>:<p>
 						Try Again! Your Score Is Below <strong>50%</strong>
@@ -61,9 +73,10 @@ export default function ShowQuestion(props) {
 				<>
 					
 					<div className='question-section'>
+					<p style={{color:'red'}}>Note: You will not get marks if the deadline expires.</p>
 						<Progress completed={completedPBar} />
 						<div className='question-count'>
-							<span>Question {currentQuestion}</span>/{questions.length-1}
+							<span>Question {currentQuestion+1}</span>/{questions.length}
 						</div>
 						<div className='question-text'>{questions[currentQuestion].questionText}</div>
 					</div>
