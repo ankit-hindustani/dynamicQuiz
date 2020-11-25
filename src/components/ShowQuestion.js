@@ -8,7 +8,7 @@ export default function ShowQuestion(props) {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
-	const [completedPBar,setCompletedPBar]=useState(90);
+	const [completedPBar,setCompletedPBar]=useState(99);
 	const questions=props.question;
 
 		
