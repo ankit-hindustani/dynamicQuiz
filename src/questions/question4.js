@@ -57,8 +57,8 @@ const LearningLicenceTest=[
     {
         questionText: 'If you see a yellow light at the traffic signal, you should',
         answerOptions: [
-            { answerText: 'Reduce your vehicle speed and proceed with caution', isCorrect: true },
             { answerText: 'ears', isCorrect: false },
+            { answerText: 'Reduce your vehicle speed and proceed with caution', isCorrect: true },
             { answerText: 'ears', isCorrect: false },
             { answerText: 'ears', isCorrect: false },
         ],

@@ -17,6 +17,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+
 }
 
 .app {
@@ -34,18 +35,17 @@ body {
 }
 
 .homeQuestionList {
-  align-items: center;
   background-color: #50A;
   width: auto;
   min-width: 300px;
-  max-width: 400px;
+  max-width: 300px;
   min-height: 100px;
   height: min-content;
   border-radius: 15px;
   padding: 20px;
   margin: 20px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
-  display:inline-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+  display:inline-block ;
   justify-content: space-evenly;
 }
 
@@ -106,13 +106,6 @@ button {
   cursor: pointer;
 }
 
-.correct {
-  background-color: #2f922f;
-}
-
-.incorrect {
-  background-color: #ff3333;
-}
 
 button:hover {
   background-color: #555e7d;
@@ -124,4 +117,56 @@ button:focus {
 
 button svg {
   margin-right: 5px;
+}
+
+
+/* about card */
+card {
+  border-radius: 25px;
+  position: relative;
+  padding: 250px 150px;
+  background-color: #81ecec;
+  margin: 50px 0;
+  height: 200px;
+  box-shadow: 0 2px 5px #ccc;
+  text-align: left;
+}
+
+.top {
+  border-radius: 25px 25px 0 0;
+  height: 100px;
+  width: 100%;
+  background-color: #00cec9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+.name {
+  font-size: 2em;
+  color: #2d3436;
+  display: flex;
+  flex: 1;
+  margin: 10% 20px 0;
+}
+
+.card img {
+  margin: 30px 20px 0 0;
+}
+
+.circle-img {
+  border-radius: 50%;
+  border: 7px solid #fff;
+  width: 120px;
+  height: 120px;
+}
+
+.bottom {
+  margin-top: 120px;
+}
+
+.info {
+  margin: 20px 0;
+  color: #1a7e76;
 }

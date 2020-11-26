@@ -1,23 +1,33 @@
 import React, { useState,useEffect } from 'react';
+import Progress from 'react-progressbar';
 
 
 export default function ShowQuestion(props) {
 
-	const [seconds, setSeconds] = useState(7);	
+	const [seconds, setSeconds] = useState(5);	
 	const [currentQuestion, setCurrentQuestion] = useState(1);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
+	const [completedPBar,setCompletedPBar]=useState(90);
 	const questions=props.question;
 
 	useEffect(() => {
 		const interval = setInterval(() => {
 		  setSeconds(seconds => seconds - 1);
-		  
 		}, 1000);
 		return ()=>
-				clearInterval(interval);
-			
+				clearInterval(interval);		
 	  }, []);
+
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setCompletedPBar(completedPBar => completedPBar - 3);
+		}, 1000);
+		return ()=>
+				clearInterval(interval);		
+	  }, [currentQuestion]);
+
 
 	const handleAnswerOptionClick = (isCorrect) => {
 		if (isCorrect) {
@@ -26,6 +36,7 @@ export default function ShowQuestion(props) {
 
 		const nextQuestion = currentQuestion + 1;
 		if (nextQuestion < questions.length) {
+			setCompletedPBar(completedPBar=>90);
 			setCurrentQuestion(nextQuestion);
 		} else {
 			setShowScore(true);
@@ -48,8 +59,9 @@ export default function ShowQuestion(props) {
 				</>
 			) : (
 				<>
-
+					
 					<div className='question-section'>
+						<Progress completed={completedPBar} />
 						<div className='question-count'>
 							<span>Question {currentQuestion}</span>/{questions.length-1}
 						</div>
