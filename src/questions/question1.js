@@ -90,14 +90,5 @@ const DataStructure=[
             { answerText: 'quick sort', isCorrect: false },
         ],
     },
-    {
-        questionText: 'qqq',
-        answerOptions: [
-            { answerText: 'Bubble', isCorrect: false },
-            { answerText: 'Quick', isCorrect: true },
-            { answerText: 'Merge', isCorrect: false },
-            { answerText: 'Insertion', isCorrect: false },
-        ],
-    },
 ];
 export default DataStructure;

@@ -90,16 +90,6 @@ const CLanguage=[
             { answerText: ' WILD Pointer', isCorrect: false },
         ],
     },
-    {
-        questionText: 'qqq',
-        answerOptions: [
-            { answerText: 'Bubble', isCorrect: false },
-            { answerText: 'Quick', isCorrect: true },
-            { answerText: 'Merge', isCorrect: false },
-            { answerText: 'Insertion', isCorrect: false },
-        ],
-    },
-   
    
 
 ];

@@ -1,12 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 
 
 export default function ShowQuestion(props) {
-	
+
+	const [seconds, setSeconds] = useState(7);	
 	const [currentQuestion, setCurrentQuestion] = useState(1);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
 	const questions=props.question;
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+		  setSeconds(seconds => seconds - 1);
+		  
+		}, 1000);
+		return ()=>
+				clearInterval(interval);
+			
+	  }, []);
 
 	const handleAnswerOptionClick = (isCorrect) => {
 		if (isCorrect) {
@@ -22,15 +33,16 @@ export default function ShowQuestion(props) {
 	};
 	return (
 		<div className='app'>
-			{showScore ? (<>
+			{seconds<1 ?(<>
+				{showScore ? (<>
 				<div className='score-section'>
 					You scored {score} out of {questions.length-1}<br/>
 					
 				</div>
 				{score>((questions.length-1)/2)?<p>
-						Good! Your Score Is Above 50%
+						Good! Your Score Is Above <strong>50%</strong>
 					</p>:<p>
-						Try Again! Your Score Is Below 50%
+						Try Again! Your Score Is Below <strong>50%</strong>
 					</p>}
 					<a href='/'>GoTo Home</a>
 				</>
@@ -49,7 +61,10 @@ export default function ShowQuestion(props) {
 						))}
 					</div>
 				</>
-			)}
+			)}</>):(<div className='timer-text'>
+						<h1>Starting in {seconds} seconds</h1>
+					</div>)}
+			
 		</div>
 	);
 }
