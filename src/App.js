@@ -22,7 +22,7 @@ function HandleClick(topic){
                 <div className="homeQuestionList" >
                 <h1>{topic[0].topicName}</h1>
                 <p>
-                  Total Question: {topic.length-1}
+                  Total Question: {50+topic.length-1}
                   <button onClick={()=>HandleClick(topic)}>Click To Start</button>
                   
                 </p>
