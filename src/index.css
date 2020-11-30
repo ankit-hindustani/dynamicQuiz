@@ -17,11 +17,13 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding-top: 50px;
 
 }
 
 .app {
   background-color:#50A;
+  
   width: auto;
   min-width: 300px;
   max-width: 600px;
@@ -56,6 +58,11 @@ body {
     margin-top: 0px;
     
   }
+
+}
+
+.nav-color{
+  background-color: #50A;
 
 }
 
@@ -180,4 +187,7 @@ card {
   margin: 20px 0;
   color: #1a7e76;
 }
+
+
+
 

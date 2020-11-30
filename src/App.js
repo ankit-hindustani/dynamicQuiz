@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import {Switch, Route } from 'react-router-dom';
 import ShowQuestion from './components/ShowQuestion';
 import questionNameList from './questions/questionNameList';
-
+import About from "./components/About";
 
 
 export default function App() {
@@ -13,6 +14,9 @@ function HandleClick(topic){
 }
 	return (
 	<>
+  <Switch>
+    <Route exact path="/About" component={About}/>
+  </Switch>
     {questionNameList.map((topic)=>{
       return isClicked?
                 <div className="homeQuestionList" >

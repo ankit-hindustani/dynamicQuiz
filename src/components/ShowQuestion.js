@@ -82,7 +82,7 @@ export default function ShowQuestion(props) {
 					</div>
 					<div className='answer-section'>
 						{questions[currentQuestion].answerOptions.map((answerOption) => (
-							<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+							<button className="custom-btn" onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
 						))}
 					</div>
 				</>
