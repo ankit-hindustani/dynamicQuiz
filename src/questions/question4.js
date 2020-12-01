@@ -63,15 +63,6 @@ const LearningLicenceTest=[
             { answerText: 'ears', isCorrect: false },
         ],
     },
-    {
-        questionText: 'qqq',
-        answerOptions: [
-            { answerText: 'years', isCorrect: true },
-            { answerText: 'ears', isCorrect: false },
-            { answerText: 'ears', isCorrect: false },
-            { answerText: 'ears', isCorrect: false },
-        ],
-    },
 
 ];
 export default LearningLicenceTest;

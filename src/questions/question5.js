@@ -202,15 +202,15 @@ const BasicPhp=[
         ],
     },
 
-    {
-        questionText: 'ques',
-        answerOptions: [
-            { answerText: 'opt', isCorrect: false },
-            { answerText: 'opt', isCorrect: false },
-            { answerText: 'opt', isCorrect: false },
-            { answerText: 'opt', isCorrect: false },
-        ],
-    },
+    // {
+    //     questionText: 'ques',
+    //     answerOptions: [
+    //         { answerText: 'opt', isCorrect: false },
+    //         { answerText: 'opt', isCorrect: false },
+    //         { answerText: 'opt', isCorrect: false },
+    //         { answerText: 'opt', isCorrect: false },
+    //     ],
+    // },
 
     
 
