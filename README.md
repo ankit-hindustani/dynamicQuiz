@@ -13,5 +13,5 @@
 
 
 ### Contributor
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
+[<img src="./public/images/ankit_avatar.jpg" width="200"/>](./public/images/ankit_avatar.jpg)
+##### ANKIT SINGH
